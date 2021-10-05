@@ -1,0 +1,25 @@
+/**
+ * Custom Breakpoints
+ *
+ * Use: @media (--medium) {}
+ *
+ * Tip: You can nest media queries.
+ * https://gist.github.com/JeremyEnglert/a48ef614dc4a193eb0a7c26d3376c13b
+ *
+ */
+
+@custom-media --small (min-width: 576px);
+@custom-media --medium (min-width: 768px);
+@custom-media --large (min-width: 992px);
+@custom-media --xlarge (min-width: 1200px);
+@custom-media --xxlarge (min-width: 1440px);
+
+@custom-media --medium-down (max-width: 991px);
+@custom-media --small-only (max-width: 767px);
+
+@custom-media --header-breakpoint (--medium);
+@custom-media --header-breakpoint-down (--small-only);
+
+/* @custom-media --motion (prefers-reduced-motion: no-preference); */
+@custom-media --reduced-motion (prefers-reduced-motion: reduce);
+@custom-media --motion not all and (prefers-reduced-motion: reduce);
