@@ -1,0 +1,23 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": false,
+  },
+  "html.validate.scripts": true,
+  "html.validate.styles": false,
+  "editor.formatOnSave": true,
+  "editor.colorDecorators": true,
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "postcss.validate": false,
+  "typescript.validate.enable": false,
+  "[css]": {
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "[postcss]": {
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?"
+  }
+}
