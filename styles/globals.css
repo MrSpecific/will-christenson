@@ -17,3 +17,62 @@ a {
   text-decoration: none;
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--heading-font-family);
+  letter-spacing: -0.02em;
+}
+
+h1,
+.h1,
+.mega {
+  font-size: var(--font-size-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5,
+.h5,
+.content-heading {
+  font-size: var(--font-size-h5);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-size-h6);
+}
+
+.visually-hidden {
+  /* stylelint-disable-next-line */
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
