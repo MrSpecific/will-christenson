@@ -15,7 +15,8 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Mr. Specific</h1>
+        <h1 className={styles.title}>Will Christenson</h1>
+        <a href="github.com">Test Link</a>
       </main>
 
       <Footer />

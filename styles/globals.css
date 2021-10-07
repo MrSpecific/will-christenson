@@ -13,8 +13,13 @@ body {
 }
 
 a {
-  color: inherit;
+  /* color: inherit; */
+  color: var(--link-color);
   text-decoration: none;
+
+  &:hover {
+    color: var(--link-color-hover);
+  }
 }
 
 h1,

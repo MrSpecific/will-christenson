@@ -3,7 +3,7 @@ import styles from '@styles/components/Header.module.css';
 
 const Header = (props) => {
   return (
-    <header className={className}>
+    <header className={styles.header}>
       <Nav />
       {props.children}
     </header>

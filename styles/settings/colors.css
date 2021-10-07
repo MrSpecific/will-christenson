@@ -3,7 +3,12 @@
   --white: rgb(251, 249, 248);
   --dark-grey: rgb(50, 49, 50);
   --nearly-black: #191918;
+  --rust: rgb(201, 118, 27);
+  --rust-dark: rgb(119, 74, 36);
 
-  --body-bg: var(--dark-grey);
+  --body-bg: var(--rust);
   --body-color: var(--white);
+
+  --link-color: var(--rust);
+  --link-color-hover: var(--rust-dark);
 }
