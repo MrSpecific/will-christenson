@@ -6,8 +6,8 @@
   --rust: rgb(201, 118, 27);
   --rust-dark: rgb(119, 74, 36);
 
-  --body-bg: var(--rust);
-  --body-color: var(--white);
+  --body-bg: var(--white);
+  --body-color: var(--dark-grey);
 
   --link-color: var(--rust);
   --link-color-hover: var(--rust-dark);

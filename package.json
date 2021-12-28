@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "open http://localhost:3035 && next dev -p 3035",
     "build": "next build",
     "lint": "next lint",
     "start": "next start"
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "dependencies": {
     "classnames": "^2.3.1",
     "hamburger-react": "^2.4.1",

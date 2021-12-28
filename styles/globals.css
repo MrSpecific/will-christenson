@@ -1,5 +1,7 @@
 @import "modern-css-reset";
 
+@import "./base/layout";
+
 @import "./settings/breakpoints";
 @import "./settings/colors";
 @import "./settings/typography";
@@ -13,7 +15,6 @@ body {
 }
 
 a {
-  /* color: inherit; */
   color: var(--link-color);
   text-decoration: none;
 
