@@ -1,7 +1,7 @@
 const siteInfo = {
   title: 'Will Christenson',
   url: 'https://dangercode.net',
-  description: 'Portfolio & Blog',
+  description: 'Portfolio & Blog of Will Christenson',
   opengraphImage: '/opengraph.png',
 };
 

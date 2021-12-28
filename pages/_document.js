@@ -17,14 +17,6 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.png" />
 
-          <meta property="og:title" content={siteInfo.title} />
-          <meta property="og:site_name" content={siteInfo.title} />
-          <meta property="og:url" content={siteInfo.url} />
-          <meta property="og:description" content={siteInfo.description} />
-          <meta property="og:type" content="website" />
-          <meta property="og:image" content={siteInfo.opengraphImage} />
-          <meta property="twitter:image" content={siteInfo.opengraphImage} />
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
