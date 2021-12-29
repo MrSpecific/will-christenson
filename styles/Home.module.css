@@ -1,0 +1,26 @@
+.megaTitle {
+  --font-size-h1: 12vw;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.firstName,
+.lastName {
+  display: block;
+}
+
+.firstName {
+  padding-right: 2.5em;
+}
+
+.lastName {
+  margin-top: -0.15em;
+}
+
+.byline {
+  font-size: 0.25em;
+  margin-top: -0.25em;
+  padding-left: 0.4em;
+}

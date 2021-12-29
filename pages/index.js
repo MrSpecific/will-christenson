@@ -16,7 +16,11 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Will Christenson</h1>
+        <h1 className={styles.megaTitle}>
+          <span className={styles.firstName}>Will</span>
+          <span className={styles.lastName}>Christenson</span>
+          <span className={styles.byline}>Full-Stack Web Development</span>
+        </h1>
       </main>
 
       <Footer />
