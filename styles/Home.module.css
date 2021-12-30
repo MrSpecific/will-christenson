@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(90deg, var(--coral) 50%, var(--body-bg) 50%);
 }
 
 .megaTitle {
@@ -31,7 +32,7 @@
 .byline {
   font-size: 0.3em;
   margin-top: -0.25em;
-  padding-left: 0.4em;
+  padding-left: 0.65em;
   color: var(--yellow);
   letter-spacing: -0.02em;
 }
