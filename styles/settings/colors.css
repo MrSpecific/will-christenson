@@ -6,6 +6,9 @@
   --rust: rgb(201, 118, 27);
   --rust-dark: rgb(119, 74, 36);
 
+  --coral: #ff8552;
+  --yellow: #ffc759;
+
   --body-bg: var(--white);
   --body-color: var(--dark-grey);
 
