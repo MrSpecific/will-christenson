@@ -6,15 +6,33 @@
   --rust: rgb(201, 118, 27);
   --rust-dark: rgb(119, 74, 36);
 
+  --grape: hsla(252, 37%, 61%, 1);
+  --glossy-grape: hsla(252, 17%, 64%, 1);
+
   --coral: #ff8552;
   --yellow: #ffc759;
 
   --primary-color: var(--dark-grey);
-  --accent-color: var(--rust);
+  --accent-color: var(--grape);
+  --tertiary-color: var(--glossy-grape);
 
   --body-bg: var(--white);
   --body-color: var(--primary-color);
 
-  --link-color: var(--rust);
-  --link-color-hover: var(--rust-dark);
+  --link-color: var(--accent-color);
+  --link-color-hover: var(--tertiary-color);
+
+  /* CSS HEX */
+  --rich-black-fogra-39: #0c0f0aff;
+  --winter-sky: #ff206eff;
+  --lemon-glacier: #fbff12ff;
+  --turquoise: #41ead4ff;
+  --white: #ffffffff;
+
+  /* CSS HSL */
+  --rich-black-fogra-39: hsla(96, 20%, 5%, 1);
+  --winter-sky: hsla(339, 100%, 56%, 1);
+  --lemon-glacier: hsla(61, 100%, 54%, 1);
+  --turquoise: hsla(172, 80%, 59%, 1);
+  --white: hsla(0, 0%, 100%, 1);
 }
