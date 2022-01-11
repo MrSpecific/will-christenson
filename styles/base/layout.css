@@ -1,2 +1,8 @@
 .container {
+  max-width: var(--container-width);
+}
+
+.content {
+  padding-left: var(--edge-space);
+  padding-right: var(--edge-space);
 }

@@ -15,6 +15,17 @@
   --font-size-h4: 18px;
   --font-size-h5: 18px;
   --font-size-h6: 16px;
+  --font-size-byline: 20px;
+
+  @media (--medium) {
+    --font-size-h1: 48px;
+    --font-size-byline: 30px;
+  }
+
+  @media (--large) {
+    --font-size-h1: 10vw;
+    --font-size-byline: 1.5vw;
+  }
 
   --content-font-size: 20px;
 }

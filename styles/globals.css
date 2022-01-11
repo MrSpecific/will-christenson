@@ -14,6 +14,11 @@ body {
   color: var(--body-color);
 }
 
+body {
+  background-image: url("public/images/wall-minimal.jpeg");
+  background-size: cover;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -36,13 +41,14 @@ h5,
 h6,
 .h6 {
   font-family: var(--heading-font-family);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 h1,
 .h1,
 .mega {
   font-size: var(--font-size-h1);
+  line-height: 1;
 }
 
 h2,

@@ -1,5 +1,11 @@
 :root {
-  --edge-space: 10px;
+  --edge-space: 12px;
   --spacer: 20px;
   --section-padding-y: 60px;
+
+  @media (--medium) {
+    --edge-space: 20px;
+  }
+
+  --container-width: 1200px;
 }

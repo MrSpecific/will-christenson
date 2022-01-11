@@ -1,5 +1,40 @@
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
+} */
+
+.pageTitle {
+  position: relative;
+  margin-bottom: 0.09em;
+  /* border-bottom: 6px solid var(--primary-color); */
+
+  &::after {
+    content: "";
+    height: max(4px, 0.4vw);
+    position: absolute;
+    inset: calc(100% - 0.02em) 0.01vw auto;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+  }
+}
+
+.byline {
+  /* color: var(--yellow); */
+  position: relative;
+  display: block;
+  font-family: var(--heading-font-family);
+  font-size: var(--font-size-byline);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    height: max(3px, 0.3vw);
+    position: absolute;
+    inset: calc(100% - 0.02em) 0.01vw auto;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+  }
 }

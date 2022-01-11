@@ -9,8 +9,11 @@
   --coral: #ff8552;
   --yellow: #ffc759;
 
+  --primary-color: var(--dark-grey);
+  --accent-color: var(--rust);
+
   --body-bg: var(--white);
-  --body-color: var(--dark-grey);
+  --body-color: var(--primary-color);
 
   --link-color: var(--rust);
   --link-color-hover: var(--rust-dark);
