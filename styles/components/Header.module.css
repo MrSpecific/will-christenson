@@ -1,8 +1,9 @@
-/* .header {
-  position: fixed;
+.header {
+  /* position: fixed;
   top: 0;
-  left: 0;
-} */
+  left: 0; */
+  mix-blend-mode: multiply;
+}
 
 .pageTitle {
   position: relative;
@@ -21,13 +22,22 @@
 
 .byline {
   /* color: var(--yellow); */
-  position: relative;
-  display: block;
+
   font-family: var(--heading-font-family);
   font-size: var(--font-size-byline);
   font-weight: 700;
   letter-spacing: -0.02em;
   z-index: 1;
+}
+
+.headerRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @media (--small-only) {
+    flex-direction: column;
+  }
 
   &::after {
     content: "";

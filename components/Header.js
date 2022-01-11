@@ -6,10 +6,12 @@ const Header = ({ headline, byline, children }) => {
     <header className={styles.header}>
       <div className="content">
         {headline && <h1 className={styles.pageTitle}>{headline}</h1>}
-        {byline && <div className={styles.byline}>{byline}</div>}
+        <div className={styles.headerRow}>
+          {byline && <div className={styles.byline}>{byline}</div>}
+          <Nav />
+        </div>
+        {children && <div className={styles.headerRow}>{children}</div>}
       </div>
-      {children}
-      {/* <Nav /> */}
     </header>
   );
 };
