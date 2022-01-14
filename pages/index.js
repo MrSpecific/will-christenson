@@ -15,7 +15,17 @@ export default function Home() {
 
       <Header headline="Will Christenson" byline="Full-stack Web Development"></Header>
 
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <div className="triptych content content-y">
+          <Image
+            src="/images/will-portrait-28-medium.png"
+            width={1600}
+            height={2200}
+            alt="A black and white photo of a man standing in front of a white backdrop, wearing black clothes."
+          />
+          <div></div>
+        </div>
+      </main>
 
       <Footer />
     </Layout>

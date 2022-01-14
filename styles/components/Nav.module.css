@@ -15,3 +15,9 @@
 .navItem {
   display: inline-block;
 }
+
+.homeIcon {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+}
