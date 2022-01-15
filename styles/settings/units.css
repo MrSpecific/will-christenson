@@ -1,10 +1,17 @@
 :root {
   --edge-space: 12px;
   --spacer: 20px;
+  --gap-s: 10px;
+  --gap: 20px;
+  --gap-l: 40px;
   --section-padding-y: 60px;
 
   @media (--medium) {
-    --edge-space: 20px;
+    --edge-space: 30px;
+    --spacer: 40px;
+    --gap-s: 20px;
+    --gap: 30px;
+    --gap-l: 60px;
   }
 
   --container-width: 1200px;

@@ -8,14 +8,14 @@
 }
 
 .content-y {
-  padding-top: var(--edge-space);
-  padding-bottom: var(--edge-space);
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
 }
 
 .triptych {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--spacer);
+  grid-gap: var(--gap);
 
   @media (--medium) {
     grid-template-columns: repeat(3, 1fr);

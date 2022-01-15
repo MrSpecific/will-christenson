@@ -15,8 +15,8 @@ body {
 }
 
 body {
-  background-image: url("public/images/wall-minimal.jpeg");
-  background-image: url("public/images/wall-minimal.webp");
+  background-image: url("/images/wall-minimal.jpeg");
+  background-image: url("/images/wall-minimal.webp");
   background-size: cover;
 }
 

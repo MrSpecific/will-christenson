@@ -1,11 +1,11 @@
 .footer {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  right: 0;
+  right: 0; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: var(--gap-s);
   width: 100%;
   padding: var(--edge-space);
 
