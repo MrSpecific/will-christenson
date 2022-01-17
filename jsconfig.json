@@ -5,6 +5,7 @@
     "paths": {
       "@components/*": ["./components/*"],
       "@svg/*": ["./components/svg/*"],
+      "@content/*": ["./content/*"],
       "@data/*": ["./data/*"],
       "@pages/*": ["./pages/*"],
       "@public/*": ["./public/*"],

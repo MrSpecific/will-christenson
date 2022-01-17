@@ -1,11 +1,15 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import loadContent from '@utils/loadContent';
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Layout from '@components/Layout';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+const { log } = console;
+
+export default function Home({ intro, ...props }) {
   return (
     <Layout>
       <Head>
@@ -24,7 +28,7 @@ export default function Home() {
             alt="A black and white photo of a man standing in front of a white backdrop, wearing black clothes."
           />
           <div className="body-copy">
-            <span className="drop-cap">Hi</span>
+            <span className="drop-cap">Hi,</span> Im a
           </div>
         </div>
       </main>
@@ -32,4 +36,10 @@ export default function Home() {
       <Footer />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const intro = await loadContent('homeIntro');
+
+  return { props: { intro } };
 }
