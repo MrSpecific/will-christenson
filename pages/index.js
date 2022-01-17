@@ -23,7 +23,9 @@ export default function Home() {
             height={2200}
             alt="A black and white photo of a man standing in front of a white backdrop, wearing black clothes."
           />
-          <div>Hi there</div>
+          <div className="body-copy">
+            <span className="drop-cap">Hi</span>
+          </div>
         </div>
       </main>
 

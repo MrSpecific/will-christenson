@@ -1,0 +1,13 @@
+.body-copy {
+  font-size: 18px;
+
+  @media (--medium) {
+    font-size: 20px;
+  }
+}
+
+.drop-cap {
+  font-size: 4em;
+  font-weight: 700;
+  float: left;
+}
