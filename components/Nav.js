@@ -1,7 +1,9 @@
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import classNames from 'classnames';
 import siteInfo from '@data/siteInfo';
-import Arrow from './svg/arrow.svg';
+import ArrowIcon from './svg/ArrowIcon';
+// import Arrow from './svg/github.svg';
 import styles from '@styles/components/Nav.module.css';
 
 export const NavItem = ({ path, children }) => {
@@ -14,13 +16,22 @@ export const NavItem = ({ path, children }) => {
   );
 };
 
+const HomeLink = () => {
+  return (
+    <NavItem path="/">
+      <ArrowIcon className={styles.homeIcon} />
+      <span className="visually-hidden">Home</span>
+    </NavItem>
+  );
+};
+
 const Nav = () => {
+  const router = useRouter();
+
   return (
     <nav className={styles.nav}>
       <ol className={styles.navList}>
-        <NavItem path="/">
-          <Arrow className={styles.homeIcon} />
-        </NavItem>
+        {router.pathname !== '/' && <HomeLink />}
         {siteInfo.nav.map((item, index) => {
           return (
             <NavItem key={`${item.path}-${index}`} path={item.path}>

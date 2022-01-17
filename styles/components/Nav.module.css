@@ -22,8 +22,7 @@
   }
 }
 
-/* .homeIcon {
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-} */
+.homeIcon {
+  position: relative;
+  top: 0.12em;
+}
