@@ -1,6 +1,7 @@
 :root {
   --pure-white: #fff;
   --white: rgb(251, 249, 248);
+  --light-grey: hsl(266, 3%, 87%);
   --dark-grey: rgb(50, 49, 50);
   --nearly-black: #191918;
   --rust: rgb(201, 118, 27);

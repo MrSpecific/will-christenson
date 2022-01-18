@@ -10,4 +10,5 @@
 .homePhoto {
   height: auto;
   object-fit: cover;
+  background-color: var(--light-grey);
 }
