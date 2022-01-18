@@ -90,3 +90,7 @@ h6,
   border: 0;
   clip: rect(0 0 0 0);
 }
+
+::selection {
+  background-color: var(--pale-grape);
+}
