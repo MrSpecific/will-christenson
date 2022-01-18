@@ -1,18 +1,24 @@
 .footer {
-  /* position: fixed;
-  bottom: 0;
-  right: 0; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: var(--gap-s);
   width: 100%;
   padding: var(--edge-space);
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: var(--gap) 0 0;
+}
+
+.socialLink {
+  display: inline-block;
+  padding: 8px;
 
   & svg {
-    height: 36px;
+    width: 30px;
     fill: currentColor;
   }
-
-  --link-color: var(--dark-grey);
 }

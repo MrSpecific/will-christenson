@@ -1,3 +1,12 @@
+.homeContent {
+  @media (--medium) {
+    grid-template-columns: 1fr 2fr;
+  }
+  @media (--xlarge) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .homePhoto {
   height: auto;
   object-fit: cover;

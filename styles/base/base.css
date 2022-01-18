@@ -11,6 +11,7 @@
 }
 
 .drop-cap {
+  color: var(--dark-grape);
   font-size: 3em;
   font-weight: 700;
   line-height: 1;

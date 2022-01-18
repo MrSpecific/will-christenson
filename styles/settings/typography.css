@@ -9,7 +9,7 @@
   --heading-font-family: var(--inter);
   --body-font-family: var(--font-family-primary);
 
-  --font-size-h1: 40px;
+  --font-size-h1: 44px;
   --font-size-h2: 24px;
   --font-size-h3: 20px;
   --font-size-h4: 18px;
@@ -18,7 +18,7 @@
   --font-size-byline: 20px;
 
   @media (--medium) {
-    --font-size-h1: 48px;
+    --font-size-h1: 50px;
     --font-size-byline: 30px;
   }
 

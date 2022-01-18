@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import classNames from 'classnames';
 import loadContent from '@utils/loadContent';
 import RenderMarkdown from '@utils/RenderMarkdown';
 
@@ -21,7 +22,7 @@ export default function Home({ intro, ...props }) {
       <Header headline="Will Christenson" byline="Full-stack Web Development"></Header>
 
       <main className={styles.main}>
-        <div className="triptych content content-y">
+        <div className={classNames(['triptych', 'content', 'content-y', [styles.homeContent]])}>
           <Image
             src="/images/will-portrait-28-medium.png"
             width={1600}
