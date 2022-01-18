@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import loadContent from '@utils/loadContent';
+import RenderMarkdown from '@utils/RenderMarkdown';
 
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -28,7 +29,8 @@ export default function Home({ intro, ...props }) {
             alt="A black and white photo of a man standing in front of a white backdrop, wearing black clothes."
           />
           <div className="body-copy">
-            <span className="drop-cap">Hi,</span> Im a
+            <span className="drop-cap">{intro.meta.dropCap}</span>
+            <RenderMarkdown ast={intro.content} />
           </div>
         </div>
       </main>

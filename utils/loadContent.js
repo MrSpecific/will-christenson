@@ -1,14 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { unified } from 'unified';
-import markdown from 'remark-parse';
-
-const parseMarkdown = (content) => {
-  const engine = unified().use(markdown);
-  const ast = engine.parse(content);
-
-  return engine.runSync(ast);
-};
+import parseMarkdown from '@utils/parseMarkdown';
 
 const contentDirectory = `${process.cwd()}/content`;
 
