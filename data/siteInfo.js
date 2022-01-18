@@ -7,7 +7,7 @@ const siteInfo = {
     { path: '/about', label: 'About.' },
     { path: '/contact', label: 'Contact.' },
     { path: '/work', label: 'Work.' },
-    { path: '/articles', label: 'Articles.' },
+    // { path: '/articles', label: 'Articles.' },
   ],
 };
 
