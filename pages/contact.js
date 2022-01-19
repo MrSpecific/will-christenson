@@ -3,6 +3,7 @@ import siteInfo from '@data/siteInfo';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Layout from '@components/Layout';
+import ContactForm from '@components/ContactForm';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -15,7 +16,9 @@ export default function Home() {
 
       <Header headline="Contact" byline="Will Christenson"></Header>
 
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <ContactForm />
+      </main>
 
       <Footer />
     </Layout>
