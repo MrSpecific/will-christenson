@@ -1,14 +1,15 @@
 import { useState } from 'react';
+import styles from '@styles/components/ContactForm.module.css';
 
 const FormInput = ({ type = 'text', name, label, value, onChange }) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className="input-wrapper">
       {type === 'textarea' ? (
         <textarea name={name} value={value} onChange={onChange} />
       ) : (
-        <input type={type} name={name} value={value} onChange={onChange} />
+        <input type={type} name={name} value={value} onChange={onChange} placeholder={label} />
       )}
+      <label htmlFor={name}>{label}</label>
     </div>
   );
 };
@@ -61,7 +62,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.contactForm}>
       <FormInput
         type="name"
         value={fullname}
@@ -101,7 +102,9 @@ const ContactForm = () => {
         value={message}
         label="Message"
       />
-      <button type="submit">{buttonText}</button>
+      <button type="submit" className="button">
+        {buttonText}
+      </button>
       {showFailureMessage && <h2>Failed to send</h2>}
     </form>
   );

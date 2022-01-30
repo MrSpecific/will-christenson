@@ -1,0 +1,123 @@
+form {
+  --input-padding-y: 20px;
+  --input-padding-x: 23px;
+  --input-padding: var(--input-padding-y) var(--input-padding-x);
+  --input-border-size: 2px;
+  --input-border-radius: 4px;
+  --form-spacer: 22px;
+  --form-spacer-half: calc(var(--form-spacer) / 2);
+
+  --input-background: var(--cream);
+  --input-color: var(--dark-grape);
+  --input-border-color: var(--dark-grape);
+  --input-placeholder-color: var(--glossy-grape);
+
+  font-family: var(--font-family-primary);
+
+  & > * + * {
+    margin-top: var(--form-spacer);
+  }
+}
+
+input,
+textarea,
+select {
+  &,
+  &[type="text"],
+  &[type="email"],
+  &[type="tel"],
+  &[type="password"],
+  &[type="search"] {
+    line-height: 1;
+    border-radius: var(--input-border-radius);
+    border: solid var(--input-border-size) var(--input-border-color);
+    padding: var(--input-padding);
+
+    &::placeholder {
+      color: var(--input-placeholder-color);
+    }
+
+    &::focus {
+      border-color: var(--grape);
+    }
+  }
+}
+
+textarea {
+  max-width: 100%;
+  min-height: 64px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto;
+  grid-auto-flow: row;
+  grid-column-gap: var(--form-spacer);
+  grid-row-gap: var(--form-spacer);
+
+  @media (--medium) {
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  & + .input-wrapper {
+    margin-top: var(--spacer);
+  }
+
+  & input,
+  & textarea {
+    background-color: var(--input-background);
+    transition: padding 200ms;
+    width: 100%;
+  }
+
+  &:not(.select-wrapper) label {
+    pointer-events: none;
+    position: absolute;
+    top: 5px;
+    left: calc(var(--input-padding-x) + var(--input-border-size));
+    color: var(--input-color);
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 400ms, transform 0ms linear 1s;
+  }
+
+  & input:not(:placeholder-shown) + label,
+  & textarea:not(:placeholder-shown) + label {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms linear, transform 200ms ease-out;
+  }
+
+  & input:not(:placeholder-shown),
+  & textarea:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + 9px);
+    padding-bottom: calc(var(--input-padding-y) - 9px);
+  }
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: var(--spacer);
+
+  & > a {
+    display: inline-block;
+  }
+
+  & > * + * {
+    margin-left: var(--spacer);
+  }
+}
+
+[data-aria-hidden="true"] {
+  display: none;
+}

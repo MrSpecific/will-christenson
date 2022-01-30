@@ -1,6 +1,8 @@
 @import "modern-css-reset";
 
 @import "./base/base";
+@import "./base/buttons";
+@import "./base/forms";
 @import "./base/layout";
 
 @import "./settings/breakpoints";
