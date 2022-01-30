@@ -7,12 +7,13 @@ async function sendEmail(req, res) {
     // console.log('REQ.BODY', req.body);
     await sendgrid.send({
       to: 'william.christenson@gmail.com', // Your email where you'll receive emails
-      from: 'william.christenson@gmail.com', // your website email address here
+      // from: 'william.christenson@gmail.com', // your website email address here
+      from: 'will@dangercode.net', // your website email address here
       subject: `${req.body.subject}`,
       html: `<div><h2>Form Submission</h2>${JSON.stringify(req.body)}</div>`,
     });
   } catch (error) {
-    // console.log(error);
+    console.log(error, sendgrid);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 

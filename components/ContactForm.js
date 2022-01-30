@@ -19,11 +19,22 @@ const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState('Send');
+
+  //   Form validation state
+  const [errors, setErrors] = useState({});
+
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // let isValidForm = handleValidation();
 
+    setButtonText('Sending');
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
         email: email,
@@ -38,10 +49,14 @@ const ContactForm = () => {
     });
 
     const { error } = await res.json();
+
     if (error) {
       console.log(error);
+      setShowFailureMessage(true);
       return;
     }
+
+    setButtonText('Send');
     console.log(fullname, email, subject, message);
   };
 
@@ -86,7 +101,8 @@ const ContactForm = () => {
         value={message}
         label="Message"
       />
-      <button type="submit">Submit</button>
+      <button type="submit">{buttonText}</button>
+      {showFailureMessage && <h2>Failed to send</h2>}
     </form>
   );
 };
