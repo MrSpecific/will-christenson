@@ -1,24 +1,65 @@
+@import "../settings/breakpoints";
+
 .footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--gap-s);
   width: 100%;
   padding: var(--edge-space);
+  margin-top: var(--gap);
+
+  @media (--medium) {
+    justify-content: flex-end;
+  }
+}
+
+.footerSocials {
+  letter-spacing: 0.01em;
+}
+
+.socialsHeading {
+  margin-bottom: 4px;
+  color: var(--grey);
+  font-size: 12px;
 }
 
 .socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   list-style: none;
   padding: 0;
-  margin: var(--gap) 0 0;
+  margin: 0;
 }
 
-.socialLink {
+.socialIcon {
   display: inline-block;
   padding: 8px;
 
   & svg {
     width: 30px;
     fill: currentColor;
+  }
+}
+
+.socialLink {
+  --link-color: var(--white);
+  --link-color-hover: var(--white);
+  --link-color-active: var(--white);
+
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: var(--glossy-grape);
+  color: var(--white);
+  font-size: 13px;
+
+  &:hover {
+    background-color: var(--grape);
+  }
+
+  &:active {
+    background-color: var(--dark-grape);
   }
 }

@@ -4,6 +4,7 @@
   --cream: hsla(36, 25%, 97%);
   --translucent-cream: hsla(290, 25%, 97%, 50%);
   --light-grey: hsl(266, 3%, 87%);
+  --grey: hsl(266, 1%, 37%);
   --dark-grey: rgb(50, 49, 50);
   --nearly-black: #191918;
   --rust: rgb(201, 118, 27);
@@ -26,6 +27,7 @@
 
   --link-color: var(--accent-color);
   --link-color-hover: var(--tertiary-color);
+  --link-color-active: var(--primary-color);
 
   /* CSS HEX */
   --rich-black-fogra-39: #0c0f0aff;
