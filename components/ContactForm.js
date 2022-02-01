@@ -102,9 +102,11 @@ const ContactForm = () => {
         value={message}
         label="Message"
       />
-      <button type="submit" className="button">
-        {buttonText}
-      </button>
+      <div className="form-actions">
+        <button type="submit" className="button">
+          {buttonText}
+        </button>
+      </div>
       {showFailureMessage && <h2>Failed to send</h2>}
     </form>
   );

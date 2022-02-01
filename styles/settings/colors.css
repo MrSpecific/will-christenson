@@ -1,7 +1,8 @@
 :root {
   --pure-white: #fff;
   --white: rgb(251, 249, 248);
-  --cream: hsl(38, 32%, 90%)
+  --cream: hsla(36, 25%, 97%);
+  --translucent-cream: hsla(290, 25%, 97%, 50%);
   --light-grey: hsl(266, 3%, 87%);
   --dark-grey: rgb(50, 49, 50);
   --nearly-black: #191918;

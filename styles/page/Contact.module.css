@@ -1,2 +1,11 @@
-.formWrapper {
+@import "../settings/breakpoints";
+
+.contactFormWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--spacer);
+
+  @media (--medium) {
+    grid-template-columns: 1fr 2fr;
+  }
 }

@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import classNames from 'classnames';
 
+import loadContent from '@utils/loadContent';
+import Content from '@components/Content';
 import siteInfo from '@data/siteInfo';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -8,7 +10,7 @@ import Layout from '@components/Layout';
 import ContactForm from '@components/ContactForm';
 import styles from '@styles/page/Contact.module.css';
 
-export default function Home() {
+export default function Contact({ intro }) {
   return (
     <Layout>
       <Head>
@@ -19,7 +21,10 @@ export default function Home() {
       <Header headline="Contact" byline="Will Christenson"></Header>
 
       <main className={styles.main}>
-        <section className={classNames(['content', 'content-y', [styles.formWrapper]])}>
+        <section className={classNames(['content', 'content-y', [styles.contactFormWrapper]])}>
+          <div className={styles.contactIntro}>
+            <Content content={intro} />
+          </div>
           <ContactForm />
         </section>
       </main>
@@ -27,4 +32,10 @@ export default function Home() {
       <Footer />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const intro = await loadContent('contactIntro');
+
+  return { props: { intro } };
 }

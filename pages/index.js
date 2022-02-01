@@ -2,8 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import classNames from 'classnames';
 import loadContent from '@utils/loadContent';
-import RenderMarkdown from '@utils/RenderMarkdown';
-
+import Content from '@components/Content';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Layout from '@components/Layout';
@@ -34,7 +33,7 @@ export default function Home({ intro, ...props }) {
           />
           <div className="body-copy">
             <span className="drop-cap">{intro.meta.dropCap}</span>
-            <RenderMarkdown ast={intro.content} />
+            <Content content={intro} />
           </div>
         </div>
       </main>
