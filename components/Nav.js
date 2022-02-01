@@ -18,7 +18,7 @@ export const NavItem = ({ path, children }) => {
 
 const HomeLink = () => {
   return (
-    <NavItem path="/">
+    <NavItem path="/" title="Back home">
       <ArrowIcon className={styles.homeIcon} />
       <span className="visually-hidden">Home</span>
     </NavItem>

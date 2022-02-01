@@ -30,10 +30,40 @@ const ContactForm = () => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors['fullname'] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors['email'] = true;
+      isValid = false;
+    }
+    if (subject.length <= 0) {
+      tempErrors['subject'] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors['message'] = true;
+      isValid = false;
+    }
+
+    // setErrors({ ...tempErrors });
+    console.log('errors', errors);
+    return isValid;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // let isValidForm = handleValidation();
+    let isValidForm = handleValidation();
+
+    if (!isValidForm) {
+      return;
+    }
 
     setButtonText('Sending');
     const res = await fetch('/api/sendgrid', {
@@ -103,11 +133,16 @@ const ContactForm = () => {
         label="Message"
       />
       <div className="form-actions">
-        <button type="submit" className="button">
+        <div className={styles.formMessages}>{showFailureMessage && <h2>Failed to send</h2>}</div>
+        <button
+          type="submit"
+          className="button"
+          disabled={Object.entries(errors).length > 0}
+          ariaLive="polite"
+        >
           {buttonText}
         </button>
       </div>
-      {showFailureMessage && <h2>Failed to send</h2>}
     </form>
   );
 };

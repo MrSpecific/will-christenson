@@ -6,7 +6,7 @@ import Footer from '@components/Footer';
 import Layout from '@components/Layout';
 
 import ProjectCard from '@components/ProjectCard';
-import styles from '../styles/Home.module.css';
+import styles from '@styles/page/Work.module.css';
 
 export default function Work({ allProjects }) {
   return (
@@ -18,10 +18,14 @@ export default function Work({ allProjects }) {
 
       <Header headline="Work" byline="Current &amp; Past Projects"></Header>
 
-      <main className={styles.main}>
-        {allProjects.map((project) => (
-          <ProjectCard {...project} key={project.id} />
-        ))}
+      <main className="content content-y">
+        <ul className={styles.projectList}>
+          {allProjects.map((project) => (
+            <li className={styles.projectRow} key={project.id}>
+              <ProjectCard {...project} />
+            </li>
+          ))}
+        </ul>
       </main>
 
       <Footer />

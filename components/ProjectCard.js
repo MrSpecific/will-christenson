@@ -4,10 +4,10 @@ import styles from '@styles/components/ProjectCard.module.css';
 
 const ProjectCard = ({ title, featuredImage, date, tags }) => {
   return (
-    <li>
+    <div className={styles.projectCard}>
       <h2>{title}</h2>
       <Image data={featuredImage.responsiveImage} className={styles.cardImage} />
-    </li>
+    </div>
   );
 };
 

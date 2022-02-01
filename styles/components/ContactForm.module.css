@@ -1,2 +1,7 @@
 .contactForm {
 }
+
+.formMessages {
+  flex: 1;
+  text-align: left;
+}
