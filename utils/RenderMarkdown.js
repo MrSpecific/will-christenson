@@ -27,6 +27,17 @@ const getComponent = (node) => {
     case 'link':
       return ({ url, children }) => <a href={url}>{children}</a>;
 
+    case 'list':
+      return ({ children, ordered = false }) => {
+        return ordered ? <ol>{children}</ol> : <ul>{children}</ul>;
+      };
+
+    case 'listItem':
+      return ({ children }) => <li>{children}</li>;
+
+    // case 'html':
+    //   return ({ value }) => <div dangerouslySetInnerHTML={{ __html: value }} />;
+
     /* Handle all types here … */
 
     default:
