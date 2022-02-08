@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import classNames from 'classnames';
 
 import styles from '@styles/components/ContactForm.module.css';
 
@@ -24,12 +25,10 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
   //   Setting button text on form submission
+  const [formState, setFormState] = useState('ready');
   const [buttonText, setButtonText] = useState('Send');
 
   const submitForm = async (data) => {
-    console.log(data);
-    // return;
-
     setButtonText('Sending');
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify(data),
@@ -44,14 +43,25 @@ const ContactForm = () => {
     if (error) {
       console.log(error);
       setShowFailureMessage(true);
+      setButtonText('Send');
       return;
     }
 
-    setButtonText('Send');
+    setFormState('success');
   };
 
+  const formClass = classNames({
+    [styles.contactForm]: true,
+    [styles.formReady]: formState === 'ready',
+    [styles.formComplete]: formState === 'success',
+  });
+
+  if (formState === 'success') {
+    return <h3>Thanks for getting in touch, I&apos;ll get back to you soon!</h3>;
+  }
+
   return (
-    <form onSubmit={handleSubmit(submitForm)} className={styles.contactForm}>
+    <form onSubmit={handleSubmit(submitForm)} className={formClass}>
       <FormInput
         type="text"
         register={register('fullname', { required: true })}
