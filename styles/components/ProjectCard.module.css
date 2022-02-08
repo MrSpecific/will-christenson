@@ -1,5 +1,15 @@
+@import "../settings/breakpoints";
+
 .projectCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--gap);
+
+  @media (--medium) {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .cardImage {
+  height: auto;
 }

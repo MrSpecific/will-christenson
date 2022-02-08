@@ -38,15 +38,20 @@ const PAGE_QUERY = gql`
     allProjects(first: 20, orderBy: date_DESC) {
       id
       title
+      link
       date
       featuredImage {
         responsiveImage(imgixParams: { fit: max, w: 600 }) {
           ...responsiveImageFragment
         }
       }
+      projectType
       tags {
         title
         slug
+      }
+      description {
+        value
       }
     }
   }

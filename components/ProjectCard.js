@@ -2,12 +2,27 @@
 import { Image, StructuredText } from 'react-datocms';
 import styles from '@styles/components/ProjectCard.module.css';
 
-const ProjectCard = ({ title, featuredImage, date, tags }) => {
+const ProjectCard = ({ title, link, featuredImage, projectType, date, description, tags }) => {
   return (
-    <div className={styles.projectCard}>
-      <h2>{title}</h2>
-      <Image data={featuredImage.responsiveImage} className={styles.cardImage} />
-    </div>
+    <section className={styles.projectCard}>
+      <div className={styles.imageWrapper}>
+        <Image data={featuredImage.responsiveImage} className={styles.cardImage} />
+      </div>
+      <div className={styles.cardContent}>
+        <h2>
+          {link ? (
+            <a href={link} target="_blank" rel="noopener">
+              {title}
+            </a>
+          ) : (
+            title
+          )}
+        </h2>
+        <div className="body-copy">
+          <StructuredText data={description} />
+        </div>
+      </div>
+    </section>
   );
 };
 
