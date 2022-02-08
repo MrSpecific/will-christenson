@@ -11,7 +11,7 @@ const ProjectCard = ({ title, link, featuredImage, projectType, date, descriptio
       <div className={styles.cardContent}>
         <h2>
           {link ? (
-            <a href={link} target="_blank" rel="noopener">
+            <a href={link} target="_blank" rel="noreferrer">
               {title}
             </a>
           ) : (
