@@ -6,6 +6,7 @@
     "dev": "open http://localhost:3035 && next dev -p 3035",
     "build": "next build",
     "lint": "next lint",
+    "open": "open http://localhost:3035",
     "start": "next start"
   },
   "browserslist": [
