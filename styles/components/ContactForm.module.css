@@ -1,4 +1,7 @@
 .contactForm {
+  &.formComplete {
+    display: none;
+  }
 }
 
 .formMessages {

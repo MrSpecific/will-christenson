@@ -46,7 +46,7 @@ select {
 
 textarea {
   max-width: 100%;
-  min-height: 64px;
+  min-height: 120px;
 }
 
 .input-group {
@@ -68,7 +68,7 @@ textarea {
   position: relative;
 
   & + .input-wrapper {
-    margin-top: var(--spacer);
+    margin-top: var(--gap-s);
   }
 
   & input,
