@@ -22,7 +22,7 @@ const SocialLink = ({ url, children, label }) => {
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerSocials}>
+      <section id="socials" className={styles.footerSocials}>
         <h2 className={styles.socialsHeading}>Find me on: </h2>
         <ul className={styles.socials}>
           <SocialLink url="//github.com/MrSpecific" label="Github" />
@@ -31,7 +31,7 @@ const Footer = () => {
           <SocialLink url="//www.instagram.com/mr_specific/" label="Instagram" />
           <SocialLink url="//www.flickr.com/photos/bombcity/albums" label="Flickr" />
         </ul>
-      </div>
+      </section>
     </footer>
   );
 };
