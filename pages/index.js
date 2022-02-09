@@ -26,8 +26,8 @@ export default function Home({ intro, ...props }) {
         <div className={classNames(['triptych', 'content', 'content-y', [styles.homeContent]])}>
           <Image
             src={profilePhoto}
-            width={1600}
-            height={2200}
+            width={800}
+            height={1100}
             alt="A black and white photo of a man standing in front of a white backdrop, wearing black clothes."
             className={styles.homePhoto}
             placeholder="blur"
