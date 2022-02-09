@@ -13,9 +13,11 @@ const SocialIcon = ({ url, children, label }) => {
 };
 const SocialLink = ({ url, children, label }) => {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-      {label}
-    </a>
+    <li>
+      <a href={url} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+        {label}
+      </a>
+    </li>
   );
 };
 
