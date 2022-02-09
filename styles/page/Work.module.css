@@ -2,6 +2,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-gap: var(--gap);
 }
 
 .projectRow {

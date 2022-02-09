@@ -97,7 +97,7 @@ const ContactForm = () => {
           type="submit"
           className="button"
           disabled={Object.entries(errors).length > 0}
-          ariaLive="polite"
+          aria-live="polite"
         >
           {buttonText}
         </button>

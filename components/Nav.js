@@ -6,9 +6,9 @@ import ArrowIcon from './svg/ArrowIcon';
 // import Arrow from './svg/github.svg';
 import styles from '@styles/components/Nav.module.css';
 
-export const NavItem = ({ path, children }) => {
+export const NavItem = ({ path, children, className }) => {
   return (
-    <li className={styles.navItem}>
+    <li className={classNames([styles.navItem, className])}>
       <Link href={path} className={styles.navLink}>
         <a>{children}</a>
       </Link>
@@ -33,8 +33,9 @@ const Nav = () => {
       <ol className={styles.navList}>
         {router.pathname !== '/' && <HomeLink />}
         {siteInfo.nav.map((item, index) => {
+          const itemClass = classNames({ [styles.current]: item.path === router.pathname });
           return (
-            <NavItem key={`${item.path}-${index}`} path={item.path}>
+            <NavItem key={`${item.path}-${index}`} path={item.path} className={itemClass}>
               {item.label}
             </NavItem>
           );

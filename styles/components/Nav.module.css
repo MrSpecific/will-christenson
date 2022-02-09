@@ -20,6 +20,11 @@
     height: 26px;
     width: auto;
   }
+
+  &.current {
+    --link-color: var(--dark-grape);
+    --link-color-hover: var(--grey);
+  }
 }
 
 .homeIcon {
