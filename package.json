@@ -7,7 +7,8 @@
     "build": "next build",
     "lint": "next lint",
     "open": "open http://localhost:3035",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "browserslist": [
     "defaults",
