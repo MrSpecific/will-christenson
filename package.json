@@ -8,7 +8,8 @@
     "lint": "next lint",
     "open": "open http://localhost:3035",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "ztest": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "browserslist": [
     "defaults",
@@ -32,6 +33,8 @@
     "unified": "^10.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@babel/preset-typescript": "^7.16.7",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "babel-jest": "^27.5.1",
