@@ -2,6 +2,19 @@
 import { Image, StructuredText } from 'react-datocms';
 import styles from '@styles/components/ProjectCard.module.css';
 
+const ProjectTags = ({ tags }) => {
+  if (!tags || tags.length === 0) return null;
+  return (
+    <ul className={styles.projectTagList}>
+      {tags.map((tag) => (
+        <li key={tag.slug} className={styles.projectTag}>
+          {tag.title}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 const ProjectCard = ({ title, link, featuredImage, projectType, date, description, tags }) => {
   return (
     <section className={styles.projectCard}>
@@ -18,6 +31,7 @@ const ProjectCard = ({ title, link, featuredImage, projectType, date, descriptio
             title
           )}
         </h2>
+        <ProjectTags tags={tags} />
         <div className="body-copy">
           <StructuredText data={description} />
         </div>

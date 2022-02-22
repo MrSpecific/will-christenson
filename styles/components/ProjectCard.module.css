@@ -8,10 +8,33 @@
   @media (--medium) {
     grid-template-columns: 1fr 2fr;
   }
+
+  & h2 {
+    --link-color: var(--color-primary);
+  }
 }
 
 .cardImage {
   height: auto;
   border: 2px solid var(--dark-grape);
   border-radius: 4px;
+}
+
+.projectTagList {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--gap-s);
+}
+
+.projectTag {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  background-color: var(--glossy-grape);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
