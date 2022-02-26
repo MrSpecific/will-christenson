@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "GT Walsheim Pro Bold Regular";
+  src: url("/fonts/GT-Walsheim-Pro-Bold-Regular.woff2") format("woff2"),
+    url("/fonts/GT-Walsheim-Pro-Bold-Regular.woff") format("woff");
+  font-display: swap;
+}

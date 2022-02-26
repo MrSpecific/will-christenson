@@ -2,11 +2,12 @@
   --inter: "Inter", Helvetica, Helvetica Neue, sans-serif;
   --system: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --gt-walsheim: "GT Walsheim Pro Bold Regular", var(--inter);
 
   --font-family-primary: var(--inter);
-  --font-family-secondary: var(--inter);
+  --font-family-secondary: var(--gt-walsheim);
 
-  --heading-font-family: var(--inter);
+  --heading-font-family: var(--gt-walsheim);
   --body-font-family: var(--font-family-primary);
 
   --font-size-h1: 44px;
