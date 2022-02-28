@@ -2,13 +2,13 @@
 heading: Technologies
 ---
 
-- **HTML / CSS / JS**
-- **Git / Github**
 - React
 - NextJS
 - Shopify
 - Wordpress
 - Vercel / Netlify
+- Webpack / ESBuild
+- Jest
 - SQL
 
 ### Design collaboration

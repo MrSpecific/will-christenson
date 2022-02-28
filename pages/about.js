@@ -9,7 +9,7 @@ import Footer from '@components/Footer';
 import Layout from '@components/Layout';
 import styles from '@styles/page/About.module.css';
 
-export default function AboutPage({ proficiencies, technologies, experience }) {
+export default function AboutPage({ skills, technologies, experience }) {
   return (
     <Layout>
       <Head>
@@ -22,8 +22,8 @@ export default function AboutPage({ proficiencies, technologies, experience }) {
       <main className={styles.main}>
         <div className={classNames(['triptych', 'content', 'content-y', [styles.homeContent]])}>
           <div className="body-copy">
-            <h2>{proficiencies.meta.heading}</h2>
-            <Content content={proficiencies} />
+            <h2>{skills.meta.heading}</h2>
+            <Content content={skills} />
           </div>
           <div className="body-copy">
             <h2>{technologies.meta.heading}</h2>
@@ -42,9 +42,9 @@ export default function AboutPage({ proficiencies, technologies, experience }) {
 }
 
 export async function getStaticProps() {
-  const proficiencies = await loadContent('proficiencies');
+  const skills = await loadContent('skills');
   const technologies = await loadContent('technologies');
   const experience = await loadContent('experience');
 
-  return { props: { proficiencies, technologies, experience } };
+  return { props: { skills, technologies, experience } };
 }
