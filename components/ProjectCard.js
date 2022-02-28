@@ -16,10 +16,11 @@ const ProjectTags = ({ tags }) => {
 };
 
 const ProjectCard = ({ title, link, featuredImage, projectType, date, description, tags }) => {
+  const ProjectImage = <Image data={featuredImage.responsiveImage} className={styles.cardImage} />;
   return (
     <section className={styles.projectCard}>
       <div className={styles.imageWrapper}>
-        <Image data={featuredImage.responsiveImage} className={styles.cardImage} />
+        {link ? <a href={link}>{ProjectImage}</a> : ProjectImage}
       </div>
       <div className={styles.cardContent}>
         <h2>
