@@ -4,9 +4,10 @@ const siteInfo = {
   description: 'Portfolio & Blog',
   opengraphImage: '/opengraph.png',
   nav: [
-    { path: '/about', label: 'About.' },
+    // { path: '/about', label: 'About.' },
     { path: '/contact', label: 'Contact.' },
-    { path: '/work', label: 'Work.' },
+    // { path: '/work', label: 'Work.' },
+    { path: '/shop', label: 'Shop.' },
     // { path: '/articles', label: 'Articles.' },
   ],
 };
