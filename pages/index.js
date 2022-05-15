@@ -4,9 +4,7 @@ import classNames from 'classnames';
 
 import loadContent from '@utils/loadContent';
 import Content from '@components/Content';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Layout from '@components/Layout';
+import { Header, Footer, Layout } from '@components/layout';
 import styles from '@styles/Home.module.css';
 import profilePhoto from '@public/images/will-portrait-28-medium.png';
 

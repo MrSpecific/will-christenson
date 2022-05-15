@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import classNames from 'classnames';
 import siteInfo from '@data/siteInfo';
-import ArrowIcon from './svg/ArrowIcon';
+import ArrowIcon from '../svg/ArrowIcon';
 // import Arrow from './svg/github.svg';
 import styles from '@styles/components/Nav.module.css';
 

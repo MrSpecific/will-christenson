@@ -4,9 +4,7 @@ import classNames from 'classnames';
 import loadContent from '@utils/loadContent';
 import Content from '@components/Content';
 import siteInfo from '@data/siteInfo';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Layout from '@components/Layout';
+import { Header, Footer, Layout } from '@components/layout';
 import ContactForm from '@components/ContactForm';
 import styles from '@styles/page/Contact.module.css';
 
