@@ -12,7 +12,7 @@ swell.init(
 
 const swellClient = {
   init: () => {
-    swell.init(
+    return swell.init(
       process.env.NEXT_PUBLIC_SWELL_STORE_ID,
       process.env.NEXT_PUBLIC_SWELL_STOREFRONT_API_KEY,
       options
@@ -25,6 +25,7 @@ const swellClient = {
       page: 1,
       expand: ['variants'],
     });
+
     return products;
   },
 };
