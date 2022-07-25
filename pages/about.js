@@ -3,10 +3,7 @@ import classNames from 'classnames';
 
 import siteInfo from '@data/siteInfo';
 import loadContent from '@utils/loadContent';
-import Content from '@components/Content';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Layout from '@components/Layout';
+import { Layout, Header, Footer, Content } from '@layout';
 import styles from '@styles/page/About.module.css';
 
 export default function AboutPage({ skills, technologies, experience }) {

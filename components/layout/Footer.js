@@ -1,7 +1,7 @@
 import styles from '@styles/components/Footer.module.css';
-import GithubLogo from './svg/github.svg';
-import FlickrLogo from './svg/flickr.svg';
-import InstagramLogo from './svg/instagram.svg';
+import GithubLogo from '../svg/github.svg';
+import FlickrLogo from '../svg/flickr.svg';
+import InstagramLogo from '../svg/instagram.svg';
 
 const SocialIcon = ({ url, children, label }) => {
   return (

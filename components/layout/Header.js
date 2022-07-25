@@ -1,4 +1,4 @@
-import Nav from '@components/Nav';
+import Nav from './Nav';
 import styles from '@styles/components/Header.module.css';
 
 const Header = ({ headline, byline, children }) => {

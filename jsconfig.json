@@ -4,13 +4,17 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["./components/*"],
+      "@layout": ["./components/layout/"],
       "@svg/*": ["./components/svg/*"],
       "@content/*": ["./content/*"],
+      "@images/*": ["./content/images/*"],
       "@data/*": ["./data/*"],
       "@pages/*": ["./pages/*"],
       "@public/*": ["./public/*"],
       "@styles/*": ["./styles/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
+      "@hooks": ["./utils/hooks/"],
+      "@hooks/*": ["./utils/hooks/*"]
     }
   },
   "exclude": ["node_modules"]
