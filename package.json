@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "open http://localhost:3037 && next dev -p 3037",
     "build": "next build",
+    "studio": "cd ./studio/ && sanity start --port=3038",
     "lint": "next lint",
     "open": "open http://localhost:3037",
     "start": "next start"
@@ -15,10 +16,13 @@
   ],
   "dependencies": {
     "@formspree/react": "^2.2.4",
+    "@sanity/client": "^3.3.2",
     "@sendgrid/mail": "^7.6.0",
+    "@tanstack/react-query": "^4.0.10",
     "classnames": "^2.3.1",
     "graphql-request": "^4.0.0",
     "gray-matter": "^4.0.3",
+    "groq": "^2.29.3",
     "hamburger-react": "^2.4.1",
     "modern-css-reset": "^1.4.0",
     "react": "^18.2.0",
