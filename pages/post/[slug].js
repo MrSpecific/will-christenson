@@ -1,11 +1,31 @@
 import Head from 'next/head';
 import groq from 'groq';
+import { useQuery } from '@tanstack/react-query';
 import siteInfo from '@data/siteInfo';
 import sanityClient from '@data/sanity';
 import { Layout, Header, Footer } from '@layout';
 
+const getRecipes = () => {
+  return sanityClient.fetch(groq`*[_type == "recipe"]{
+    ...,
+    "author": *[_type == "author" && _id == ${siteInfo.authorId}]{
+      ...,
+      "avatar": avatar->{
+        ...,
+        "asset->": asset->{
+          ...,
+          "url": url
+        }
+      }
+    }
+  }`);
+};
+
 export default function Article({ post }) {
   const { title } = post;
+  // Queries
+  const query = useQuery(['recipes'], getRecipes);
+
   return (
     <Layout>
       <Head>
@@ -16,6 +36,7 @@ export default function Article({ post }) {
       <Header headline={title} byline="Mostly web dev and cooking"></Header>
 
       <main>
+        <pre>{JSON.stringify(query.data, null, 2)}</pre>
         <pre>{JSON.stringify(post, null, 2)}</pre>
       </main>
 
