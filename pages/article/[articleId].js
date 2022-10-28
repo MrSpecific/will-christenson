@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import siteInfo from '@data/siteInfo';
 import { Layout, Header, Footer } from '@layout';
-import styles from '../styles/Home.module.css';
+import styles from '@styles/Home.module.css';
 
 export default function Article({ title }) {
   return (
@@ -20,85 +20,85 @@ export default function Article({ title }) {
   );
 }
 
-export async function getStaticPaths() {
-  const allRecipes = await getRecipeList();
+// export async function getStaticPaths() {
+//   const allRecipes = await getRecipeList();
 
-  const paths = getPaths(allRecipes, 'recipeSlug');
+//   const paths = getPaths(allRecipes, 'recipeSlug');
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-const SINGLE_RECIPE_QUERY = gql`
-  query Recipe($slug: String) {
-    recipe(filter: { slug: { eq: $slug } }) {
-      title
-      date
-      description
-      slug
-      cover {
-        responsiveImage(imgixParams: { fit: crop, w: 1400, h: 800 }) {
-          ...responsiveImageFragment
-        }
-      }
-      prepTime
-      cookingTime
-      context {
-        value
-      }
-      ingredients {
-        id
-        ingredient
-        amount
-      }
-      measures {
-        id
-        unit
-        amount
-        note
-        ingredient {
-          id
-          title
-          slug
-        }
-      }
-      equipment {
-        id
-        title
-        link
-      }
-      instructions {
-        value
-      }
-      author {
-        name
-      }
-      categories {
-        title
-        slug
-      }
-      tags {
-        title
-      }
-      gallery {
-        id
-      }
-    }
-  }
+// const SINGLE_RECIPE_QUERY = gql`
+//   query Recipe($slug: String) {
+//     recipe(filter: { slug: { eq: $slug } }) {
+//       title
+//       date
+//       description
+//       slug
+//       cover {
+//         responsiveImage(imgixParams: { fit: crop, w: 1400, h: 800 }) {
+//           ...responsiveImageFragment
+//         }
+//       }
+//       prepTime
+//       cookingTime
+//       context {
+//         value
+//       }
+//       ingredients {
+//         id
+//         ingredient
+//         amount
+//       }
+//       measures {
+//         id
+//         unit
+//         amount
+//         note
+//         ingredient {
+//           id
+//           title
+//           slug
+//         }
+//       }
+//       equipment {
+//         id
+//         title
+//         link
+//       }
+//       instructions {
+//         value
+//       }
+//       author {
+//         name
+//       }
+//       categories {
+//         title
+//         slug
+//       }
+//       tags {
+//         title
+//       }
+//       gallery {
+//         id
+//       }
+//     }
+//   }
 
-  ${responsiveImageFragment}
-`;
+//   ${responsiveImageFragment}
+// `;
 
-export async function getStaticProps({ params }) {
-  const data = await request({
-    query: SINGLE_RECIPE_QUERY,
-    variables: { slug: params.recipeSlug },
-    preview: false,
-  });
+// export async function getStaticProps({ params }) {
+//   const data = await request({
+//     query: SINGLE_RECIPE_QUERY,
+//     variables: { slug: params.recipeSlug },
+//     preview: false,
+//   });
 
-  return {
-    props: data.recipe,
-  };
-}
+//   return {
+//     props: data.recipe,
+//   };
+// }
