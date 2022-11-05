@@ -9,7 +9,7 @@ export const NavItem = ({ path, children, className }) => {
   return (
     <li className={classNames([styles.navItem, className])}>
       <Link href={path} className={styles.navLink}>
-        <a>{children}</a>
+        {children}
       </Link>
     </li>
   );
