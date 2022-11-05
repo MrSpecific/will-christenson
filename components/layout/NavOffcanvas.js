@@ -35,9 +35,7 @@ const NavOffcanvas = () => {
         <div className={styles.navMain}>
           <ol className={styles.primaryNav}>
             <li className={styles.navItem}>
-              <Link href={`/`}>
-                <a>All Recipes</a>
-              </Link>
+              <Link href={`/`}>All Recipes</Link>
             </li>
           </ol>
         </div>

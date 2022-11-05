@@ -1,4 +1,7 @@
-import {getParameterlessTemplatesBySchemaType} from '@sanity/initial-value-templates'
+import {
+  getParameterlessTemplatesBySchemaType,
+  getTemplateById,
+} from '@sanity/initial-value-templates'
 import {SchemaType, getDefaultSchema} from './parts/Schema'
 import {isActionEnabled} from './parts/documentActionUtils'
 import {structureClient} from './parts/Client'
@@ -44,7 +47,11 @@ const resolveDocumentChildForItem: ChildResolver = (
   options: ChildResolverOptions
 ): ItemChild | Promise<ItemChild> | undefined => {
   const parentItem = options.parent as DocumentList
-  const type = parentItem.schemaTypeName || resolveTypeForDocument(itemId)
+  const template = options.params?.template ? getTemplateById(options.params.template) : undefined
+  const type = template
+    ? template.schemaType
+    : parentItem.schemaTypeName || resolveTypeForDocument(itemId)
+
   return Promise.resolve(type).then((schemaType) =>
     schemaType
       ? getDefaultDocumentNode({schemaType, documentId: itemId})
@@ -173,6 +180,12 @@ export class DocumentListBuilder extends GenericListBuilder<
   clone(withSpec?: PartialDocumentList): DocumentListBuilder {
     const builder = new DocumentListBuilder()
     builder.spec = {...this.spec, ...(withSpec || {})}
+
+    // Since initialValueTemplatesSpecified is only set in the constructor, we need to
+    // manually copy it over to not override initialValueTemplates below
+    if (this.initialValueTemplatesSpecified) {
+      builder.initialValueTemplatesSpecified = true
+    }
 
     if (!this.initialValueTemplatesSpecified) {
       builder.spec.initialValueTemplates = inferInitialValueTemplates(builder.spec)
