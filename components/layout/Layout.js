@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import siteInfo from '@data/siteInfo';
+import siteInfo from '@lib/siteInfo';
 
 const Layout = (props) => {
   return (

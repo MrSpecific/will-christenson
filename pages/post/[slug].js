@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import groq from 'groq';
 import { useQuery } from '@tanstack/react-query';
-import siteInfo from '@data/siteInfo';
-import sanityClient from '@data/sanity';
+import siteInfo from '@lib/siteInfo';
+import sanityClient from '@lib/sanity';
 import { Layout, Header, Footer } from '@layout';
 
 const getRecipes = () => {

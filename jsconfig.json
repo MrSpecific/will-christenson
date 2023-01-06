@@ -8,7 +8,7 @@
       "@svg/*": ["./components/svg/*"],
       "@content/*": ["./content/*"],
       "@images/*": ["./content/images/*"],
-      "@data/*": ["./data/*"],
+      "@lib/*": ["./lib/*"],
       "@pages/*": ["./pages/*"],
       "@public/*": ["./public/*"],
       "@styles/*": ["./styles/*"],

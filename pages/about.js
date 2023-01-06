@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import classNames from 'classnames';
 
-import siteInfo from '@data/siteInfo';
+import siteInfo from '@lib/siteInfo';
 import loadContent from '@utils/loadContent';
 import { Layout, Header, Footer, Content } from '@layout';
 import styles from '@styles/page/About.module.css';

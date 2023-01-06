@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import GoogleAnalytics from '@data/analytics';
+import GoogleAnalytics from '@lib/analytics';
 
 const Body = ({ children }) => {
   return <body>{children}</body>;

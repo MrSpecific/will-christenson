@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import siteInfo from '@data/siteInfo';
-import { gql, request, responsiveImageFragment } from '@data/datocms';
+import siteInfo from '@lib/siteInfo';
+import { gql, request, responsiveImageFragment } from '@lib/datocms';
 import { Layout, Header, Footer } from '@layout';
 
 import ProjectCard from '@components/ProjectCard';

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import siteInfo from '@data/siteInfo';
+import siteInfo from '@lib/siteInfo';
 import { Layout, Header, Footer } from '@layout';
 import styles from '@styles/Home.module.css';
 

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import classNames from 'classnames';
 
 import loadContent from '@utils/loadContent';
-import siteInfo from '@data/siteInfo';
+import siteInfo from '@lib/siteInfo';
 import { Layout, Header, Footer, Content } from '@layout';
 import ContactForm from '@components/ContactForm';
 import styles from '@styles/page/Contact.module.css';

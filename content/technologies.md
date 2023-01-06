@@ -3,15 +3,15 @@ heading: Technologies
 ---
 
 - React
-- NextJS
+- Next.js
 - Shopify
 - Wordpress
 - Vercel / Netlify
 - Webpack / ESBuild
 - Jest
-- SQL
+- SQL / Prisma
 
-### Design collaboration
+### Collaboration
+- Figma / Zeplin
 - Adobe Creative Suite
 - Asana / Jira
-- Figma / Zeplin
