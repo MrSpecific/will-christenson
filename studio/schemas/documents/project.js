@@ -13,7 +13,7 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 96,
       },
     },
@@ -39,7 +39,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       media: 'image',
     },
   },
