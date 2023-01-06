@@ -31,16 +31,33 @@ export default {
       type: 'blockContent',
     },
     {
+      name: 'type',
+      title: 'Type',
+      // type: 'array',
+      // of: [{type: 'string'}],
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Personal', value: 'personal'},
+          {title: 'Work', value: 'work'},
+          {title: 'Freelance', value: 'freelance'},
+        ],
+      },
+    },
+    {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }],
+      of: [{type: 'reference', to: {type: 'category'}}],
     },
   ],
+  initialValue: {
+    type: 'Personal',
+  },
   preview: {
     select: {
       title: 'title',
       media: 'image',
     },
   },
-};
+}
