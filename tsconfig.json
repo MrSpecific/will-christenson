@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -14,20 +18,57 @@
     "jsx": "preserve",
     "target": "ES2017",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@layout": ["./components/layout/"],
-      "@svg/*": ["./components/svg/*"],
-      "@content/*": ["./content/*"],
-      "@images/*": ["./content/images/*"],
-      "@data/*": ["./data/*"],
-      "@pages/*": ["./pages/*"],
-      "@public/*": ["./public/*"],
-      "@styles/*": ["./styles/*"],
-      "@utils/*": ["./utils/*"],
-      "@hooks": ["./utils/hooks/"],
-      "@hooks/*": ["./utils/hooks/*"]
-    }
+      "@components/*": [
+        "./components/*"
+      ],
+      "@layout": [
+        "./components/layout/"
+      ],
+      "@svg/*": [
+        "./components/svg/*"
+      ],
+      "@content/*": [
+        "./content/*"
+      ],
+      "@images/*": [
+        "./content/images/*"
+      ],
+      "@data/*": [
+        "./data/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@styles/*": [
+        "./styles/*"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@hooks": [
+        "./utils/hooks/"
+      ],
+      "@hooks/*": [
+        "./utils/hooks/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
