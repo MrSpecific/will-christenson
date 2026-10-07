@@ -1,3 +1,62 @@
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --bg: #fdfdfc;
+  --fg: #1c1c1a;
+  --muted: #6b6b66;
+  --accent: #2f5bd3;
+  --rule: #e6e5e1;
+  --code-bg: #f2f1ee;
+  --measure: 40rem;
+  color-scheme: light dark;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161615;
+    --fg: #ecebe7;
+    --muted: #9a9993;
+    --accent: #8aa8ff;
+    --rule: #2c2c2a;
+    --code-bg: #232321;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: var(--measure);
+  padding: 2rem 1rem 4rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+a { color: var(--accent); }
+h1, h2 { line-height: 1.2; }
+code, pre { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.9em; background: var(--code-bg); }
+code { padding: 0.1em 0.3em; border-radius: 4px; }
+pre { padding: 1rem; border-radius: 6px; overflow-x: auto; }
+pre code { padding: 0; background: none; }
+.muted, time { color: var(--muted); font-size: 0.9em; }
+
+.site-header { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; align-items: baseline; margin-bottom: 3rem; }
+.site-name { font-weight: 600; color: var(--fg); text-decoration: none; }
+.site-header nav { display: flex; gap: 1rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a[aria-current='page'] { color: var(--fg); }
+.site-footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85em; }
+
+.entry-list { list-style: none; padding: 0; }
+.entry-list li { margin-bottom: 1.5rem; }
+.entry-list li > a { font-weight: 600; margin-right: 0.5rem; }
+.entry-list time { display: block; }
+.entry-list p { margin: 0.25rem 0 0; }
+.badge { font-size: 0.75em; padding: 0.1em 0.4em; border: 1px solid var(--muted); border-radius: 4px; color: var(--muted); margin-right: 0.5rem; }
+
+.prose header time { display: block; margin-top: -0.5rem; }
+
+.readout { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1.5rem; font-variant-numeric: tabular-nums; }
+.readout dt { color: var(--muted); }
+.readout dd { margin: 0; font-weight: 600; }
+.readout[aria-busy='true'] dd { opacity: 0.4; }
+button { font: inherit; padding: 0.4rem 0.9rem; border-radius: 6px; border: 1px solid var(--rule); background: var(--code-bg); color: var(--fg); cursor: pointer; }

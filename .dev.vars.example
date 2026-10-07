@@ -1,0 +1,6 @@
+# Local secrets for `npm run dev`. Copy to .dev.vars (gitignored) and fill in.
+# In production, set each one with: npx wrangler secret put <NAME>
+# After adding or renaming a key, run `npm run cf-typegen` so c.env stays typed.
+
+# Unlocks draft posts/experiments: visit any page with ?preview=<value>
+PREVIEW_TOKEN=change-me
