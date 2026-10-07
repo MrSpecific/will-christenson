@@ -27,6 +27,7 @@ src/
     experiments.tsx      /experiments, and mounts every experiment under its slug
 
   components/          JSX shared across sections (site chrome, lists)
+  icons/               SVG icons as components: <GitHubIcon />, etc. (see icons/index.ts)
   lib/                 Non-UI helpers (formatting, preview-mode middleware)
 
   blog/
